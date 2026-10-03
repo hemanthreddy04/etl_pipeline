@@ -3,3 +3,8 @@ __pycache__/
 data/
 .env
 tests/shot-*.png
+browser/out/
+browser/test/steps.json
+browser/test/golden.json
+browser/test/vectors.json
+browser/test/shots/

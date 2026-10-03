@@ -59,6 +59,13 @@ The sample file contains a missing key, an amount written as `12,90`, a bad date
 The first run stops on the missing key. Open **Controls**, set that check to quarantine, raise the quarantine
 limit, and retry from the failed task.
 
+## Browser edition (no server at all)
+
+`browser/` holds the same site with the service ported to JavaScript, running on SQLite inside the page. The built page
+is in `docs/`, so GitHub Pages can serve it: in the repository settings choose Pages, then "Deploy from a branch", branch
+`main`, folder `/docs`. It covers the local engine only. BigQuery, Databricks, the MCP endpoint and the agent need the
+service below. See `browser/README.md` for what it does, how it is tested and how it differs.
+
 ## Deploy to Cloud Run (from Cloud Shell, nothing to install)
 
 1. Open https://shell.cloud.google.com, select your sandbox project (`gcloud config set project <id>`).
