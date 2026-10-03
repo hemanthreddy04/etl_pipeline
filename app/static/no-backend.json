@@ -1,0 +1,1 @@
+{"error": "No backend is connected. This Netlify site only serves the web page. Deploy the Python service to Cloud Run with ./deploy.sh and turn on the /api/* proxy in netlify.toml."}

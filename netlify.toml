@@ -1,0 +1,37 @@
+# The site is a single prebuilt file (app/static/index.html, assembled by web/build.sh).
+# Netlify serves it as a static site. The Python service in app/ (API, scheduler, runs, /mcp)
+# cannot run on Netlify; deploy it to Cloud Run with ./deploy.sh and proxy to it below.
+[build]
+  publish = "app/static"
+  command = ""
+
+# To connect the site to the backend, uncomment these and replace the URL with your Cloud Run address.
+# [[redirects]]
+#   from = "/api/*"
+#   to = "https://YOUR-SERVICE.a.run.app/api/:splat"
+#   status = 200
+#   force = true
+#
+# [[redirects]]
+#   from = "/mcp"
+#   to = "https://YOUR-SERVICE.a.run.app/mcp"
+#   status = 200
+#   force = true
+
+# Until the proxy above is on, API calls get a clear JSON error instead of the HTML page.
+[[redirects]]
+  from = "/api/*"
+  to = "/no-backend.json"
+  status = 503
+  force = true
+
+[[redirects]]
+  from = "/mcp"
+  to = "/no-backend.json"
+  status = 503
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
