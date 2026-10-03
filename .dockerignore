@@ -1,0 +1,7 @@
+tests
+web
+data
+*.png
+__pycache__
+*.pyc
+.git

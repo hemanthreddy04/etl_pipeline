@@ -1,0 +1,35 @@
+<div class="app" id="app">
+  <nav class="rail" id="rail" aria-label="Sections">
+    <div class="brand">
+      <span class="medals" aria-hidden="true"><i class="disc disc-bronze"></i><i class="disc disc-silver"></i><i class="disc disc-gold"></i></span>
+      <div><strong>Medallion</strong><span class="sub">Control Plane</span></div>
+    </div>
+    <div id="nav"></div>
+    <div class="rail-foot">Connected to your warehouses. Runs here execute real SQL and change real tables.</div>
+  </nav>
+  <div class="main">
+    <header class="topbar">
+      <button class="icon-btn menu" id="menu-btn" data-act="toggleRail" aria-label="Open sections">&#9776;</button>
+      <div class="search">
+        <input id="q" type="search" placeholder="Search tables, pipelines, concepts" autocomplete="off" aria-label="Search">
+        <div id="qres" hidden></div>
+      </div>
+      <div class="scope">
+        <label>Platform
+          <select id="platform" data-change="setPlatform">
+            <option value="all">All platforms</option><option value="azure">Azure</option><option value="gcp">GCP</option><option value="local">Local</option>
+          </select>
+        </label>
+        <span class="chip" id="env-chip" title="Environment of this service"></span>
+        <span class="st ok" id="live-chip">Live</span>
+      </div>
+    </header>
+    <main class="content" id="content"><div id="view"></div></main>
+  </div>
+</div>
+<div class="scrim" id="scrim" hidden data-act="closeAll"></div>
+<aside class="drawer" id="drawer" hidden aria-labelledby="drawer-title">
+  <div class="drawer-head"><h2 id="drawer-title"></h2><button class="btn sm" data-act="closeDrawer">Close</button></div>
+  <div id="drawer-body"></div>
+</aside>
+<div class="toasts" id="toasts" aria-live="polite"></div>

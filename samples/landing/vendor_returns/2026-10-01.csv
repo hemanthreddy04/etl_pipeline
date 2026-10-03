@@ -1,0 +1,13 @@
+return_id,order_id,customer_email,reason,channel,refund_amount,return_date,updated_at
+R1001,O501,ava.keller@example.com,damaged,web,49.90,2026-09-30,2026-10-01 08:00:00
+R1002,O502,noah.singh@example.com,wrong size,app,120.00,2026-09-30,2026-10-01 08:05:00
+R1003,O503,mia.laurent@example.com,changed mind,store,35.50,2026-09-30,2026-10-01 08:10:00
+R1004,O504,kenji.ito@example.com,damaged,web,"12,90",2026-09-30,2026-10-01 08:15:00
+R1005,O505,sara.okafor@example.com,late delivery,web,18.00,2026-10-01,2026-10-01 09:00:00
+R1005,O505,sara.okafor@example.com,late delivery,web,18.00,2026-10-01,2026-10-01 09:00:00
+,O506,li.wei@example.com,damaged,app,22.00,2026-10-01,2026-10-01 09:30:00
+R1007,O507,omar.haddad@example.com,wrong size,store,75.25,2026-10-01,2026-10-01 10:00:00
+R1008,O508,ines.costa@example.com,changed mind,web,210.00,2026-10-01,2026-10-01 10:20:00
+R1009,O509,tom.baker@example.com,damaged,app,64.10,not a date,2026-10-01 11:00:00
+R1010,O510,zoe.martin@example.com,wrong size,web,15.75,2026-10-01,2026-10-01 11:30:00
+R1011,O511,raj.patel@example.com,late delivery,store,99.99,2026-10-01,2026-10-01 12:00:00
