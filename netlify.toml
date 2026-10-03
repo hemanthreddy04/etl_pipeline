@@ -18,6 +18,19 @@
 #   status = 200
 #   force = true
 
+# Until the proxy above is on, API calls get a clear JSON error instead of the HTML page.
+[[redirects]]
+  from = "/api/*"
+  to = "/no-backend.json"
+  status = 503
+  force = true
+
+[[redirects]]
+  from = "/mcp"
+  to = "/no-backend.json"
+  status = 503
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
